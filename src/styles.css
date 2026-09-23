@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #12110e;
+  --color-foreground: #f3efe6;
+  --color-muted: #9a9386;
+  --color-subtle: #6f6a60;
+  --color-surface: #1c1a16;
+  --color-surface-2: #24211c;
+  --color-surface-3: #2e2a24;
+  --color-border: color-mix(in oklab, #f3efe6 12%, transparent);
+  --color-accent: #d9d0c1;
+  --color-accent-foreground: #16140f;
+  --color-ring: #d9d0c1;
+  --color-overlay: color-mix(in oklab, #070706 62%, transparent);
+  --color-dice: #f4eee4;
+  --color-dice-fg: #1c1610;
+  --color-ivory: #f3efe6;
+  --color-board-felt: #e7dcc8;
+  --color-board-inlay: #c4b49a;
+  --color-board-cell: #f3eadc;
+  --color-board-line: color-mix(in oklab, #3a2a1c 22%, transparent);
+  --color-board-star: #6b4f32;
+  --color-house-ink: #f3efe6;
+  --color-ludo-red: #c44536;
+  --color-ludo-red-ink: #f8ece8;
+  --color-ludo-green: #2d8a5e;
+  --color-ludo-green-ink: #ecf6ef;
+  --color-ludo-yellow: #c9a227;
+  --color-ludo-yellow-ink: #1a1408;
+  --color-ludo-blue: #2b6cb0;
+  --color-ludo-blue-ink: #eaf2fb;
+  --color-board-wood-1: #4a3424;
+  --color-board-wood-2: #2c1d14;
+  --color-board-wood-3: #3f2b1c;
+  --color-token-shade: #1a120c;
+
+  --font-sans: "Outfit", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Fraunces", "Times New Roman", serif;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --motion-quick: 150ms;
+  --motion-fast: 250ms;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  body {
+    min-height: 100dvh;
+    font-family: var(--font-sans);
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@keyframes ludo-pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+@keyframes ludo-roll {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  30% {
+    transform: rotate(-18deg) scale(1.06);
+  }
+  60% {
+    transform: rotate(14deg) scale(0.98);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-\[ludo-pulse_1\.4s_ease-in-out_infinite\],
+  .animate-\[ludo-roll_0\.72s_ease-in-out\] {
+    animation: none;
+  }
+}

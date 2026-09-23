@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Ludo Court",
+      "hasCanvas": false,
+      "bodyTextLen": 383,
+      "bodyTextHash": "69c3c9a492cd44de03c2ac48d490468a8a2be84c78e908204e728e56a43cfaef",
+      "bodyTextPrefix": "A FOUR-HOUSE RACE Ludo Court Bring four tokens home along a cloc",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Ludo Court",
+      "hasCanvas": false,
+      "bodyTextLen": 383,
+      "bodyTextHash": "69c3c9a492cd44de03c2ac48d490468a8a2be84c78e908204e728e56a43cfaef",
+      "bodyTextPrefix": "A FOUR-HOUSE RACE Ludo Court Bring four tokens home along a cloc",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
